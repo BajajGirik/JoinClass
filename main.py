@@ -13,3 +13,8 @@ time.sleep(1)
 
 #Pressing tab to focus the curson on console
 pyautogui.press('tab')
+
+#To write javascript on console
+#Storing the mic button and video button in variable x
+pyautogui.write('let x = document.querySelectorAll(".U26fgb")')
+pyautogui.press('enter')
