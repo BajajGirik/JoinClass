@@ -18,3 +18,11 @@ pyautogui.press('tab')
 #Storing the mic button and video button in variable x
 pyautogui.write('let x = document.querySelectorAll(".U26fgb")')
 pyautogui.press('enter')
+
+#Clicking the mic button
+pyautogui.write('x[0].click()')
+pyautogui.press('enter')
+
+#Clicking the video button
+pyautogui.write('x[1].click()')
+pyautogui.press('enter')
