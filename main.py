@@ -26,3 +26,7 @@ pyautogui.press('enter')
 #Clicking the video button
 pyautogui.write('x[1].click()')
 pyautogui.press('enter')
+
+#Clicking the join now button
+pyautogui.write('document.querySelector(".uArJ5e").click()')
+pyautogui.press('enter')
