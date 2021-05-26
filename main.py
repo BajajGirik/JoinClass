@@ -5,11 +5,11 @@ import time
 #Taking the meeting link from the user
 url = input("Enter the meeting link: ")
 browser = webbrowser.open(url)
-time.sleep(2)
+time.sleep(2.5)
 
 #Opening console on browser
 pyautogui.press('f12')
-time.sleep(1)
+time.sleep(1.5)
 
 #Pressing tab to focus the curson on console
 pyautogui.press('tab')
@@ -30,3 +30,6 @@ pyautogui.press('enter')
 #Clicking the join now button
 pyautogui.write('document.querySelector(".uArJ5e").click()')
 pyautogui.press('enter')
+
+#To remove console from screen
+pyautogui.press('f12')
