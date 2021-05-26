@@ -4,6 +4,10 @@ import time
 
 #Taking the meeting link from the user
 url = input("Enter the meeting link: ")
+
+# Use the below line to enter using a different account 
+# url += f'?authuser={input("Select the account number with which you want to login: ")}'
+
 browser = webbrowser.open(url)
 time.sleep(2.5)
 
@@ -16,7 +20,7 @@ pyautogui.press('tab')
 
 #To write javascript on console
 #Storing the mic button and video button in variable x
-pyautogui.write('let x = document.querySelectorAll(".U26fgb")')
+pyautogui.write('let x=document.querySelectorAll(".U26fgb")')
 pyautogui.press('enter')
 
 #Clicking the mic button
