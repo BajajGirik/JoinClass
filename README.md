@@ -15,4 +15,6 @@ Remove '#' from line 9 and run the code.\
 Enter the account from which you want to login.\
 
 1. Enter 0 for default.
-2. Enter 1 for the next...and so on.
+2. Enter 1 for the next...and so on.\
+
+# If you are using brave, then comment out line 19.

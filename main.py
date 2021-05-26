@@ -4,7 +4,7 @@ import time
 
 #Taking the meeting link from the user
 url = input("Enter the meeting link: ")
-
+url += '?authuser=1'
 # Use the below line to enter using a different account 
 # url += f'?authuser={input("Select the account number with which you want to login: ")}'
 
@@ -15,7 +15,7 @@ time.sleep(2.5)
 pyautogui.press('f12')
 time.sleep(1.5)
 
-#Pressing tab to focus the curson on console
+#Pressing tab to focus the curson on console. If you are in brave comment out the below line
 pyautogui.press('tab')
 
 #To write javascript on console
