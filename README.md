@@ -1,7 +1,7 @@
 # JoinClass
 
 This is a repository that will automate your joining of classes heldd on Google Meet.\
-This code does not work for Safari. So change your default browser to GoogleChrome.\
+This code does not work for Safari. So change your default browser to GoogleChrome.
 
 # Requirements:
 1. pip install pyautogui.
