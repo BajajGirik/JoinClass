@@ -5,15 +5,33 @@ import time
 #Taking the meeting link from the user
 url = input("Enter the meeting link: ")
 
-# Use the below line to enter using a different account 
-# url += f'?authuser={input("Select the account number with which you want to login: ")}'
+#Enter 0 to use default (the first account)
+#Enter 1 to use the next account...and so on
+msg = "Enter the account from which you would like to enter\n"
+example = "Enter 0 to use default(First account)\nEnter 1 to use the next one...and so on\n"
+
+acc = input(msg+example)
+
+if 'lookup' not in url:
+    url += f'?authuser={acc}'
 
 browser = webbrowser.open(url)
-time.sleep(2.5)
+
+if 'lookup' in url:
+    time.sleep(4)
+    pyautogui.press('tab')
+    
+    #for choosing account
+    for i in range(int(acc)):
+        pyautogui.press('tab')
+
+    pyautogui.press('enter')
+
+time.sleep(3)
 
 #Opening console on browser
 pyautogui.press('f12')
-time.sleep(1.5)
+time.sleep(2)
 
 #Pressing tab to focus the curson on console. If you are in brave comment out the below line
 pyautogui.press('tab')
