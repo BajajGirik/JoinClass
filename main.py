@@ -2,8 +2,9 @@ import webbrowser
 import pyautogui
 import time
 
-#Taking the meeting link from the user
-url = input("Enter the meeting link: ")
+#Taking the meeting code from the user
+url = "https://meet.google.com/"
+url += input("Enter the meeting code: ")
 
 #Enter 0 to use default (the first account)
 #Enter 1 to use the next account...and so on
@@ -11,21 +12,9 @@ msg = "Enter the account from which you would like to enter\n"
 example = "Enter 0 to use default(First account)\nEnter 1 to use the next one...and so on\n"
 
 acc = input(msg+example)
-
-if 'lookup' not in url:
-    url += f'?authuser={acc}'
+url += f'?authuser={acc}'
 
 browser = webbrowser.open(url)
-
-if 'lookup' in url:
-    time.sleep(4)
-    pyautogui.press('tab')
-    
-    #for choosing account
-    for i in range(int(acc)):
-        pyautogui.press('tab')
-
-    pyautogui.press('enter')
 
 time.sleep(3)
 
